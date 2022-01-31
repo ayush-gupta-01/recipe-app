@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Quintessential&family=Source+Serif+4:wght@300&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Source Serif 4", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background-color: #faf9f7;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

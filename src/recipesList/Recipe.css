@@ -1,0 +1,32 @@
+.recipe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 300px;
+  height: 350px;
+  margin: 50px 20px;
+}
+
+.recipe img {
+  height: 250px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1.5px solid rgb(26, 25, 25);
+}
+
+.recipe button {
+  background-color: rgb(11, 91, 182);
+  border: none;
+  padding: 6px 7px;
+  color: white;
+  font-weight: 700;
+  border-radius: 2px;
+  margin: 15px 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.recipe button:hover {
+  background-color: rgb(36, 110, 196);
+}
