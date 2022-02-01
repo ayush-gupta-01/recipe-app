@@ -16,6 +16,14 @@ const RecipeList = () => {
         >
           Finding Recipies for you...
         </h2>
+      ) : recipes.length === 0 ? (
+        <h2
+          style={{
+            color: "red",
+          }}
+        >
+          Oops ! Sorry we didn't find any recipe .
+        </h2>
       ) : (
         ""
       )}
