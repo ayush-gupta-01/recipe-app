@@ -5,7 +5,13 @@ import { Link } from "react-router-dom";
 const Recipes = ({ name, image, index }) => {
   return (
     <div className="recipe">
-      <h2>{name}</h2>
+      <h2
+        style={{
+          fontWeight: "800",
+        }}
+      >
+        {name}
+      </h2>
       <img src={image} alt={name} />
       <Link to={`/recipe/${name}`}>
         <button>View Recipe</button>

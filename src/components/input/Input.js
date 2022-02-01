@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { RecipeContext } from "../RecipeContext";
+import { RecipeContext } from "../../RecipeContext";
 import { useNavigate } from "react-router-dom";
 import "./Input.css";
 

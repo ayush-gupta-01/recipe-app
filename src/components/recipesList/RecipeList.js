@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { RecipeContext } from "../RecipeContext";
+import { RecipeContext } from "../../RecipeContext";
 import Recipes from "./Recipes";
 
 const RecipeList = () => {

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./Recipe.css";
 import { useParams } from "react-router-dom";
-import { RecipeContext } from "../RecipeContext";
+import { RecipeContext } from "../../RecipeContext";
 
 const Recipe = () => {
   const { id } = useParams();
@@ -12,7 +12,13 @@ const Recipe = () => {
     <div className="data">
       <div className="row">
         <div>
-          <h2>{data?.label}</h2>
+          <h2
+            style={{
+              fontWeight: "900",
+            }}
+          >
+            {data?.label}
+          </h2>
           <img src={data?.image} alt={data?.label} />
           <h3>Calories : {data?.calories.toFixed(3)}</h3>
         </div>
@@ -21,8 +27,7 @@ const Recipe = () => {
           <h3
             style={{
               color: "red",
-              textDecoration: "underline",
-              fontSize: "1.5rem",
+              fontSize: "1.2rem",
             }}
           >
             Ingredients
@@ -57,14 +62,21 @@ const Recipe = () => {
           color: "blue",
           fontWeight: "bold",
           textDecoration: "underline",
+          fontSize: "1.2rem",
         }}
       >
-        Nutrients per serving :{" "}
+        Nutrients :{" "}
       </h3>
       <div className="nutrients-list">
         {data?.digest.map((i, index) => (
           <div className="nutrients" key={index}>
-            <div>{i?.label} :</div>
+            <div
+              style={{
+                fontWeight: "bolder",
+              }}
+            >
+              {i?.label} :
+            </div>
             <div>
               {i?.total.toFixed(2)} {i?.unit}
             </div>
