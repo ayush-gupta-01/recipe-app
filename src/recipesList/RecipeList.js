@@ -3,26 +3,42 @@ import { RecipeContext } from "../RecipeContext";
 import Recipes from "./Recipes";
 
 const RecipeList = () => {
-  const { recipes, setRecipes } = useContext(RecipeContext);
+  const { recipes, setRecipes, loading } = useContext(RecipeContext);
+
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-evenly",
-        flexWrap: "wrap",
-        alignItems: "center",
-      }}
-    >
-      {recipes.map((recipe, index) => (
-        <div key={index}>
-          <Recipes
-            name={recipe.recipe.label}
-            image={recipe.recipe.image}
-            index={index}
-          />
-        </div>
-      ))}
-    </div>
+    <>
+      {loading ? (
+        <h2
+          style={{
+            textAlign: "center",
+            fontSize: "1rem",
+          }}
+        >
+          Finding Recipies for you...
+        </h2>
+      ) : (
+        ""
+      )}
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          flexWrap: "wrap",
+          alignItems: "center",
+        }}
+      >
+        {recipes.map((recipe, index) => (
+          <div key={index}>
+            <Recipes
+              name={recipe.recipe.label}
+              image={recipe.recipe.image}
+              index={index}
+            />
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 

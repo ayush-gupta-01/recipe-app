@@ -17,9 +17,11 @@
 
 .recipe button {
   background-color: rgb(11, 91, 182);
+  width: 150px;
   border: none;
   padding: 6px 7px;
   color: white;
+  font-size: 1rem;
   font-weight: 700;
   border-radius: 2px;
   margin: 15px 10px;
