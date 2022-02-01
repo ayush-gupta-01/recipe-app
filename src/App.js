@@ -14,7 +14,6 @@ function App() {
         <Nav />
         <Input />
         <Routes>
-          {/* <Route path="/" element={<Input />} /> */}
           <Route path="/recipe" element={<RecipeList />} />
           <Route path="/recipe/:id" element={<Recipe />} />
         </Routes>

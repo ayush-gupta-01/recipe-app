@@ -64,9 +64,9 @@ const Recipe = () => {
       <div className="nutrients-list">
         {data?.digest.map((i, index) => (
           <div className="nutrients" key={index}>
-            <div>{i.label} :</div>
+            <div>{i?.label} :</div>
             <div>
-              {i.total.toFixed(2)} {i.unit}
+              {i?.total.toFixed(2)} {i?.unit}
             </div>
           </div>
         ))}
